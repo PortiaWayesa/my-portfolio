@@ -4,160 +4,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portia Wayesa - CV</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to bottom right, #ffffff, #f3f3f3);
-      color: #333;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 0;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: #777;
-    }
-
-    section {
-      margin: 40px 0;
-    }
-
-    .section-title {
-      font-size: 1.8em;
-      border-left: 5px solid #6c63ff;
-      padding-left: 10px;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style-type: none;
-    }
-
-    .experience, .education, .skills, .contact {
-      background: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .skill-badge {
-      background-color: #6c63ff;
-      color: #fff;
-      padding: 5px 12px;
-      border-radius: 25px;
-      margin: 5px;
-      display: inline-block;
-      font-size: 0.9em;
-    }
-
-    .contact i {
-      margin-right: 10px;
-      color: #6c63ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #999;
-      font-size: 0.8em;
-    }
-  </style>
+  <title>Portia Wayesa | Software Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>Portia Wayesa</h1>
-    <p>Advanced Diploma in Information Technology Student</p>
-  </header>
 
-  <section class="summary">
-  <h2 class="section-title">Summary</h2>
-  <p>
-    I am a highly motivated and tech-savvy Advanced Diploma student in Information Technology at the Central University of Technology.
-  </p>
-  <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
-    <div style="flex: 1 1 250px; background: #f0f4ff; border-left: 5px solid #6a11cb; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-      <h3 style="margin-bottom: 10px; font-size: 1.1em; color: #333;">Lab Assistant Experience</h3>
-      <p style="font-size: 0.95em; color: #555;">Gained real-world IT support skills, helped students, maintained lab resources, and demonstrated responsibility in a tech-driven environment.</p>
-    </div>
-    <div style="flex: 1 1 250px; background: #f0f9f7; border-left: 5px solid #2575fc; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-      <h3 style="margin-bottom: 10px; font-size: 1.1em; color: #333;">Technical Skills</h3>
-      <p style="font-size: 0.95em; color: #555;">Skilled in C#, Dart, MySQL, E-Thuto platform, Microsoft Office Suite, and basic troubleshooting.</p>
-    </div>
-    <div style="flex: 1 1 250px; background: #fff5f7; border-left: 5px solid #ff5e78; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-      <h3 style="margin-bottom: 10px; font-size: 1.1em; color: #333;">People & Soft Skills</h3>
-      <p style="font-size: 0.95em; color: #555;">Strong communicator, team player, quick to adapt, and excels in high-pressure environments.</p>
-    </div>
-  </div>
-</section>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Portia.dev</div>
 
-  <section class="education">
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+
+      <!-- ROUND JUMPING IMAGE -->
+      <div class="hero-image">
+        <div class="image-circle">
+
+          <img src="images/me.jpeg" alt="Portia">
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <div class="hero-text">
+        <h1>
+          Hi, I'm Portia Wayesa
+        </h1>
+
+        <!-- TYPING TEXT (NEW) -->
+        <h2 class="typing-text">
+          And I am a <span id="typing"></span>
+        </h2>
+
+        <p class="description">
+          Aspiring Software Engineer specializing in Flutter, C#, Firebase and AI-powered systems.
+          I build real-world applications that solve meaningful problems.
+        </p>
+
+
+        <!-- SOCIAL ICONS -->
+        <div class="cta-row">
+          <a href="assets/PORTIA WAYESA_CV.pdf" class="btn primary cv-btn" target="_blank">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+
+          <div class="social-icons">
+            <a href="https://github.com/PortiaWayesa" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/portia-wayesa/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:portiawayesa@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+27719452531">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="card about-container reveal-left">
+      <div class="about-container">
+
+
+        <!-- TEXT -->
+        <div class="about-text">
+
+          <p>
+            I am an Advanced Diploma in Information Technology graduate with a strong passion for software engineering,
+            system design, and building impactful digital solutions. Over the years, I have developed my skills in
+            full-stack development, mobile app development, and cloud-based systems. I have worked extensively with
+            Flutter, ASP.NET, and Firebase to create user-friendly, scalable, and secure applications.
+            <br><br>
+            I enjoy tackling real-world problems and turning ideas into functional and elegant solutions.Right now, I am
+            working on Pampiri, an AI-powered document transformation platform that focuses on OCR-based document
+            processing, intelligent data extraction, and automated workflow management. This project allows me to
+            combine my interest in AI, automation, and cloud technologies to address practical challenges in document
+            digitization and data handling.
+            <br><br>
+            Beyond my technical skills, I care about continuous learning, teamwork, and innovation. I enjoy exploring
+            new technologies, contributing to projects that make a meaningful impact, and enhancing user experiences
+            through thoughtful software design. My goal is to use my skills to build systems that work effectively and
+            empower users and organizations to achieve more.
+          </p>
+        </div>
+        <!-- IMAGE -->
+        <div class="about-image">
+          <img src="images/graduation.jpg" alt="Portia Wayesa">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- EDUCATION -->
+  <section id="education" class="section education">
+
     <h2 class="section-title">Education</h2>
-    <ul>
-      <li><strong>Advanced Diploma in IT</strong> - Central University of Technology (Feb 2025 - Present)</li>
-      <li><strong>Diploma in IT</strong> - Central University of Technology (Feb 2022 - Nov 2024)</li>
-      <li><strong>NSC</strong> - Sehunelo Secondary School (Jan 2018 - Dec 2020)</li>
-    </ul>
+
+    <div class="education-grid">
+
+      <!-- ADVANCED DIPLOMA -->
+      <div class="education-card reveal-right">
+
+        <div class="edu-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <div class="edu-content">
+          <h3>Advanced Diploma in Information Technology</h3>
+          <p class="edu-school">Central University of Technology</p>
+          <p class="edu-year">Completed: 2025</p>
+          <p class="edu-desc">
+            Specialized in Software Development, System Design, Database Systems,
+            and Mobile Application Development using C#, Flutter, and Firebase.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- DIPLOMA -->
+      <div class="education-card reveal-left">
+
+        <div class="edu-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <div class="edu-content">
+          <h3>Diploma in Information Technology</h3>
+          <p class="edu-school">Central University of Technology</p>
+          <p class="edu-year">Completed: 2023</p>
+          <p class="edu-desc">
+            Focused on foundational IT skills, programming, networking, and database management.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
   </section>
 
-  <section class="experience">
-    <h2 class="section-title">Experience</h2>
-    <ul>
-      <li><strong>Lab Assistant</strong> - Central University of Technology (Jul 2025 - Present)</li>
-      <li><em>Assisted students, registered lab use, monitored access</em></li>
-      <li><strong>Waitress</strong> - ENGEN 1Stop (Nov 2024 - Jan 2025)</li>
-      <li><em>Customer service, order management, teamwork under pressure</em></li>
-    </ul>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section dark ">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+
+      <!-- TECHNICAL -->
+      <div class="skill-card reveal-left">
+
+        <h3>
+          <i class="fas fa-laptop-code skill-icon"></i>
+          Technical Skills
+        </h3>
+        <div class="skill-pill">C#</div>
+        <div class="skill-pill">Dart</div>
+        <div class="skill-pill">SQL</div>
+        <div class="skill-pill">Flutter</div>
+        <div class="skill-pill">ASP.NET</div>
+        <div class="skill-pill">Firebase</div>
+
+      </div>
+
+      <!-- SOFT -->
+
+      <div class="skill-card reveal-right">
+        <h3>
+          <i class="fas fa-people-group skill-icon"></i>
+          Soft Skills
+        </h3>
+        <div class="skill-pill">Problem Solving</div>
+        <div class="skill-pill">Team Collaboration</div>
+        <div class="skill-pill">Time Management</div>
+        <div class="skill-pill">Communication</div>
+        <div class="skill-pill">Adaptability</div>
+      </div>
+
+
+    </div>
+    </div>
   </section>
 
-  <section class="skills">
-    <h2 class="section-title">Technical Skills</h2>
-    <span class="skill-badge">C#</span>
-    <span class="skill-badge">Dart</span>
-    <span class="skill-badge">MySQL</span>
-    <span class="skill-badge">Microsoft Office</span>
-    <span class="skill-badge">E-Thuto</span>
-    <span class="skill-badge">Troubleshooting</span>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+      <!-- PAMPIRI -->
+      <div class="project-card reveal-right">
+        <img src="images/pampiri.jpeg" alt="Pampiri Project">
+        <div class="project-content">
+          <h3>Pampiri – AI Document Transformation System</h3>
+          <p>Pampiri is a modern Flutter-based document OCR and processing platform for scanning, extracting, and
+            exporting documents (Word, Excel, CSV, JSON) with subscription-based access.
+
+          </p>
+          <br>
+          <ul>
+
+            <li>AI-powered document processing platform</li>
+            <li>OCR text extraction and intelligent data transformation</li>
+            <li>Cloud database integration using Firebase</li>
+            <li>Scalable architecture for real-world document digitization</li>
+          </ul>
+          <br>
+          <div class="project-tags">
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Firebase</span>
+            <span class="tech-pill">OCR</span>
+            <span class="tech-pill">AI</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- JOB SYSTEM -->
+      <div class="project-card reveal-left">
+        <img src="images/project.jpg" alt="Job Application System">
+        <div class="project-content">
+          <h3>Student Job Application Management System</h3>
+          <p>A secure, multi-user Flutter and ASP.NET platform that allows students to apply for jobs and bursaries,
+            while lecturers review applications and admins manage postings.”</p>
+          <br>
+          <ul>
+            <li>Multi-user job and bursary platform</li>
+            <li>Secure authentication and role management</li>
+            <li>Backend API and database design</li>
+          </ul>
+          <br>
+          <div class="project-tags">
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Firebase</span>
+            <span class="tech-pill">ASP.NET</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MEDICATION -->
+      <div class="project-card reveal-right">
+        <img src="images/medication.png" alt="Medication Tracker">
+        <div class="project-content">
+          <h3>Medication Tracker Mobile App</h3>
+          <p>A Flutter mobile app that helps users track their medications with reminders, notifications, and cloud
+            synchronization for safe, timely dosing.”</p>
+          <br>
+          <ul>
+            <li>Reminder and notification system</li>
+            <li>Secure login and cloud storage</li>
+            <li>User-friendly mobile interface</li>
+          </ul>
+          <br>
+          <div class="project-tags">
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Firebase</span>
+            <span class="tech-pill">ASP.NET</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </section>
 
-  <section class="skills">
-    <h2 class="section-title">Core Competencies</h2>
-    <span class="skill-badge">Communication</span>
-    <span class="skill-badge">Teamwork</span>
-    <span class="skill-badge">Adaptability</span>
-    <span class="skill-badge">Time Management</span>
-    <span class="skill-badge">Analytical Thinking</span>
-  </section>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Contact Me</h2>
 
-  <section class="contact">
-    <h2 class="section-title">Contact</h2>
-    <p><i class="fa fa-envelope"></i> portiawayesa@gmail.com</p>
-    <p><i class="fa fa-phone"></i> 071 945 2531</p>
-    <p><i class="fa fa-map-marker"></i> 19909 Grassland 3, Bloemfontein</p>
+    <form class="contact-form" action="mailto:portiawayesa@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
   </section>
-
-  <footer>
-    &copy; 2025 Portia Wayesa. Built with ❤️ by Portia.
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Portia Wayesa. All Rights Reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
