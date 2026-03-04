@@ -36,13 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 });
 
-// HAMBURGER MENU
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", function () {
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-   hamburger.classList.toggle("open");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+
 });
 
 
@@ -54,7 +56,7 @@ function revealOnScroll() {
   reveals.forEach(element => {
     const windowHeight = window.innerHeight;
     const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 100;
+    const elementVisible = 200;
 
     if (elementTop < windowHeight - elementVisible) {
       element.classList.add("active");

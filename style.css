@@ -47,6 +47,21 @@ body {
 .nav-links a:hover {
   color: #38bdf8;
 }
+/* HAMBURGER  */
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
 
 /*  HERO  */
 .hero {
@@ -280,6 +295,24 @@ body {
   font-weight: 500;
   margin: 10px;
 }
+/*HONOURS PILL*/
+.honours-pill {
+  display: inline-block;
+  margin-left: 12px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #037c6e, #38bdf8);
+  color: white;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+  transition: 0.3s ease;
+}
+
+.honours-pill:hover {
+  transform: scale(1.05);
+}
 
 /*  SKILLS  */
 .skills-grid {
@@ -431,22 +464,24 @@ body {
 
 /*  MOBILE  */
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .image-circle {
-    width: 220px;
-    height: 220px;
+  .hamburger {
+    display: flex;
   }
 
   .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0%;
+    background: #037c6e;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
     display: none;
   }
 
-  .cta-row {
-    flex-direction: column;
-    align-items: center;
+  .nav-links.active {
+    display: flex;
   }
+
 }
