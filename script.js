@@ -2,7 +2,8 @@
 const roles = [
   "Software Developer",
   "Web Developer",
-  "Aspiring Software Engineer",
+  "Junior Software Engineer",
+  "Data Engineer",
  
 ];
 
