@@ -68,3 +68,62 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
+
+// Animate stat counters on scroll
+const statNums = document.querySelectorAll('.stat-num');
+
+const animateCounter = (el) => {
+  const raw = el.getAttribute('data-target');
+
+  // Handle "27hrs 45 mins" specially
+  if (raw.includes('hrs')) {
+    const hoursMatch = raw.match(/(\d+)hrs/);
+    const minsMatch = raw.match(/(\d+)\s*mins/);
+    const targetHrs = hoursMatch ? parseInt(hoursMatch[1]) : 0;
+    const targetMins = minsMatch ? parseInt(minsMatch[1]) : 0;
+    const totalSteps = targetHrs * 60 + targetMins; // count in minutes
+    let current = 0;
+    const duration = 2000;
+    const stepTime = Math.max(Math.floor(duration / totalSteps), 16);
+
+    const timer = setInterval(() => {
+      current++;
+      const hrs = Math.floor(current / 60);
+      const mins = current % 60;
+      el.textContent = `${hrs}hrs ${mins} mins`;
+      if (current >= totalSteps) {
+        el.textContent = raw; // restore exact original text
+        clearInterval(timer);
+      }
+    }, stepTime);
+    return;
+  }
+
+  // Standard number counter
+  const target = parseInt(raw);
+  if (isNaN(target)) return;
+  let current = 0;
+  const duration = 1200;
+  const stepTime = Math.max(Math.floor(duration / target), 30);
+
+  const timer = setInterval(() => {
+    current++;
+    el.textContent = current;
+    if (current >= target) {
+      el.textContent = target;
+      clearInterval(timer);
+    }
+  }, stepTime);
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      statNums.forEach(el => animateCounter(el));
+      statsObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+const statsBar = document.querySelector('.stats-bar');
+if (statsBar) statsObserver.observe(statsBar);
