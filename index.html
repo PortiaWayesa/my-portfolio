@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portia Wayesa | Software Developer & Data Engineer</title>
-  <meta name="description" content="Portia Wayesa — Junior Software Developer and Microsoft Certified Data Engineer. Flutter, C#, Microsoft Fabric, Firebase. Cum Laude IT graduate, Bloemfontein, South Africa." />
+  <meta name="description" content="Portia Wayesa — Junior Software Developer and Microsoft Certified Data Engineer. Flutter, C#, Microsoft Fabric, Firebase. Double Cum Laude IT graduate, Bloemfontein, South Africa." />
+  <meta property="og:title" content="Portia Wayesa | Software Developer & Data Engineer" />
+  <meta property="og:description" content="Double Cum Laude IT graduate. Microsoft Certified Fabric Data Engineer. Flutter · C# · Microsoft Fabric · Firebase." />
+  <meta property="og:url" content="https://portiawayesa.github.io/my-portfolio/" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Portia.dev</div>
-
-    <!-- HAMBURGER -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">Portia<span class="logo-dot">.dev</span></div>
     <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
-
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
@@ -34,397 +30,458 @@
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particle-canvas"></canvas>
     <div class="hero-container">
-
-      <!-- ROUND IMAGE -->
       <div class="hero-image">
-        <div class="image-circle">
-          <img src="images/me.jpeg" alt="Portia">
-        </div>
-      </div>
-
-      <!-- TEXT -->
-      <div class="hero-text">
-        <h1>
-          Hi, I'm Portia Wayesa
-        </h1>
-
-        <!-- TYPING TEXT -->
-        <h2 class="typing-text">
-          And I am a <span id="typing"></span>
-        </h2>
-
-        <p class="description">
-          Junior Software Developer &amp; Data Engineer specializing in Flutter, C#, Microsoft Fabric and AI-powered systems.
-          I build real-world applications that solve meaningful problems.
-        </p>
-
-        <!-- SOCIAL ICONS -->
-        <div class="cta-row">
-          <a href="assets/Portia_Wayesa_CV.pdf" class="btn primary cv-btn" target="_blank">
-            <i class="fas fa-download"></i> Download CV
-          </a>
-
-          <div class="social-icons">
-            <a href="https://github.com/PortiaWayesa" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/portia-wayesa/" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://learn.microsoft.com/en-us/users/portiawayesa-1409" target="_blank" title="Microsoft Learn">
-              <i class="fab fa-microsoft"></i>
-            </a>
-            <a href="mailto:portiawayesa@gmail.com" title="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="tel:+27719452531" title="Phone">
-              <i class="fas fa-phone"></i>
-            </a>
+        <div class="image-ring">
+          <div class="image-circle">
+            <img src="images/me.jpeg" alt="Portia Wayesa">
           </div>
         </div>
-
+        <div class="badge-ms">
+          <i class="fab fa-microsoft"></i> 2× Microsoft Certified
+        </div>
       </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow">👋 Hello, I'm</p>
+        <h1>Portia <span class="accent">Wayesa</span></h1>
+        <h2 class="typing-text">And I am a <span id="typing"></span></h2>
+        <p class="description">
+          Double Cum Laude IT graduate · Microsoft Certified Data Engineer<br>
+          Building real-world software that turns complexity into clarity.
+        </p>
+        <div class="hero-tags">
+          <span>Flutter</span><span>C#</span><span>Microsoft Fabric</span>
+          <span>Firebase</span><span>Azure</span><span>ASP.NET</span>
+        </div>
+        <div class="cta-row">
+          <a href="assets/Portia_Wayesa_CV.pdf" class="btn-primary" target="_blank">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn-outline">Get in touch</a>
+          <div class="social-icons">
+            <a href="https://github.com/PortiaWayesa" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/portia-wayesa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://learn.microsoft.com/en-us/users/portiawayesa-1409" target="_blank" title="Microsoft Learn"><i class="fab fa-microsoft"></i></a>
+            <a href="mailto:portiawayesa@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num" data-target="4">0</span>
+      <span class="stat-label">Projects Built</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="2">0</span>
+      <span class="stat-label">Microsoft Certifications</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="2">0</span>
+      <span class="stat-label">Cum Laude Qualifications</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="27">0</span>
+      <span class="stat-label">Training Hours (MS Learn)</span>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <div class="card about-container reveal-left">
-      <div class="about-container">
-
-        <!-- TEXT -->
-        <div class="about-text">
+    <div class="section-inner">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
           <p>
-            I am a Cum Laude Information Technology graduate — Advanced Diploma and Diploma, both Cum Laude — from the
-            Central University of Technology (2025/2026), and a Microsoft Certified Data Engineer. I build
-            production-ready mobile and web applications using Flutter, ASP.NET, and Firebase, and I work with
-            Microsoft Fabric, Azure data services, Lakehouse architecture, and real-time analytics pipelines.
-
-            <br><br>
-            Beyond my technical skills, I care about continuous learning, teamwork, and innovation. I enjoy exploring
-            new technologies, contributing to projects that make a meaningful impact, and enhancing user experiences
-            through thoughtful software design. My goal is to build systems that work effectively and empower users
-            and organizations to achieve more.
-
-            <br><br>
-            I am based in Bloemfontein, Free State, and open to relocating anywhere in South Africa.
+            I am a <strong>Cum Laude Information Technology graduate</strong> — Advanced Diploma and Diploma,
+            both Cum Laude — from the Central University of Technology (2025/2026), and a
+            <strong>Microsoft Certified Data Engineer</strong>. I build production-ready mobile and web
+            applications using Flutter, ASP.NET, and Firebase, and I work with Microsoft Fabric, Azure data
+            services, Lakehouse architecture, and real-time analytics pipelines.
           </p>
+          <br>
+          <p>
+            Beyond technical skills, I care about continuous learning, teamwork, and innovation. I approach
+            every project as an opportunity to turn complexity into clarity, and I thrive in collaborative
+            environments where diverse perspectives lead to elegant solutions.
+          </p>
+          <br>
+          <p>Based in <strong>Bloemfontein, Free State</strong> — open to relocating anywhere in South Africa.</p>
+          <div class="about-facts">
+            <div class="fact"><i class="fas fa-map-marker-alt"></i> Bloemfontein, Free State, SA</div>
+            <div class="fact"><i class="fas fa-envelope"></i> portiawayesa@gmail.com</div>
+            <div class="fact"><i class="fas fa-mobile-alt"></i> 071 945 2531</div>
+            <div class="fact"><i class="fas fa-briefcase"></i> Open to opportunities nationwide</div>
+          </div>
         </div>
-
-        <!-- IMAGE -->
-        <div class="about-image">
-          <img src="images/graduation.jpg" alt="Portia Wayesa">
+        <div class="about-image reveal-right">
+          <img src="images/graduation.jpg" alt="Portia Wayesa — Graduation">
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- EDUCATION -->
-  <section id="education" class="section education">
-    <h2 class="section-title">Education</h2>
+  <section id="education" class="section dark">
+    <div class="section-inner">
+      <h2 class="section-title light">Education</h2>
+      <div class="cards-grid">
 
-    <div class="education-grid">
+        <div class="info-card reveal-left">
+          <div class="card-icon teal"><i class="fas fa-graduation-cap"></i></div>
+          <div class="card-body">
+            <h3>Advanced Diploma in Information Technology</h3>
+            <p class="card-sub">Central University of Technology — NQF Level 7</p>
+            <p class="card-date">Awarded: 25 March 2026
+              <span class="pill gold">Cum Laude <i class="fas fa-trophy"></i></span>
+            </p>
+            <p class="card-desc">
+              Specialised in Software Development, System Design, Database Systems, and Mobile Development.
+            </p>
+            <div class="distinctions">
+              <span class="dist-item">Research Methodology 92%</span>
+              <span class="dist-item">Database Systems 88%</span>
+              <span class="dist-item">Operating Systems 87%</span>
+              <span class="dist-item">Software Engineering & Design 87%</span>
+              <span class="dist-item">Information Security 81%</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- ADVANCED DIPLOMA -->
-      <div class="education-card reveal-right">
-        <div class="edu-icon">
-          <i class="fas fa-graduation-cap"></i>
+        <div class="info-card reveal-right">
+          <div class="card-icon teal"><i class="fas fa-graduation-cap"></i></div>
+          <div class="card-body">
+            <h3>Diploma in Information Technology</h3>
+            <p class="card-sub">Central University of Technology — NQF Level 6</p>
+            <p class="card-date">Awarded: 26 March 2025
+              <span class="pill gold">Cum Laude <i class="fas fa-trophy"></i></span>
+            </p>
+            <p class="card-desc">
+              Focused on programming, networking, software engineering, and database management.
+              9 distinctions in Year 1 alone.
+            </p>
+            <div class="distinctions">
+              <span class="dist-item">IT Mathematics 94%</span>
+              <span class="dist-item">Software Development III 89%</span>
+              <span class="dist-item">Comm. Networks II 86%</span>
+              <span class="dist-item">Technical Programming 86%</span>
+              <span class="dist-item">Problem Solving & Algorithms 86%</span>
+            </div>
+          </div>
         </div>
-        <div class="edu-content">
-          <h3>Advanced Diploma in Information Technology</h3>
-          <p class="edu-school">Central University of Technology &mdash; NQF Level 7</p>
-          <p class="edu-year">
-            Awarded: 25 March 2026
-            <span class="honours-pill">Cum Laude <i class="fas fa-trophy"></i></span>
-          </p>
-          <p class="edu-desc">
-            Specialised in Software Development, System Design, Database Systems, and Mobile Application Development.
-            Key distinctions: Database Systems (88%), Operating Systems (87%), Software Engineering &amp; Design (87%),
-            Information Security (81%), Research Methodology/IT Project (92%).
-          </p>
-        </div>
+
       </div>
-
-      <!-- DIPLOMA -->
-      <div class="education-card reveal-left">
-        <div class="edu-icon">
-          <i class="fas fa-graduation-cap"></i>
-        </div>
-        <div class="edu-content">
-          <h3>Diploma in Information Technology</h3>
-          <p class="edu-school">Central University of Technology &mdash; NQF Level 6</p>
-          <p class="edu-year">
-            Awarded: 26 March 2025
-            <span class="honours-pill">Cum Laude <i class="fas fa-trophy"></i></span>
-          </p>
-          <p class="edu-desc">
-            Focused on foundational IT, programming, networking, and database management. 9 distinctions in Year 1
-            alone, including IT Mathematics (94%) and Problem Solving &amp; Algorithms (86%). Final year distinctions
-            in Software Development III (89%) and Communication Networks II (86%).
-          </p>
-        </div>
-      </div>
-
     </div>
   </section>
-
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="section dark">
-    <h2 class="section-title">Certifications</h2>
+  <section id="certifications" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cards-grid">
 
-    <div class="education-grid">
-
-      <!-- FABRIC DATA ENGINEER -->
-      <div class="education-card reveal-right">
-        <div class="edu-icon">
-          <i class="fab fa-microsoft"></i>
-        </div>
-        <div class="edu-content">
-          <h3>Microsoft Certified: Fabric Data Engineer Associate</h3>
-          <p class="edu-school">Microsoft &mdash; Exam DP-700</p>
-          <p class="edu-year">
-            Earned: April 9, 2026 &nbsp;|&nbsp; Expires: April 10, 2027
-            <span class="honours-pill">Associate <i class="fas fa-star"></i></span>
-          </p>
-          <p class="edu-desc">
-            Covers data ingestion and transformation, Lakehouse architecture, Apache Spark, KQL querying,
+        <div class="cert-card reveal-left">
+          <div class="cert-header">
+            <div class="ms-logo"><i class="fab fa-microsoft"></i></div>
+            <div class="cert-badge associate">ASSOCIATE</div>
+          </div>
+          <h3>Microsoft Certified:<br>Fabric Data Engineer Associate</h3>
+          <p class="cert-exam">Exam DP-700 &nbsp;·&nbsp; Earned April 9, 2026</p>
+          <p class="cert-expiry">Expires April 10, 2027 &nbsp;·&nbsp; Credential: A86185-E1BZ88</p>
+          <p class="cert-desc">
+            Covers data ingestion, Lakehouse architecture, Apache Spark, KQL querying,
             real-time event streaming, data warehousing, CI/CD pipelines, and security in Microsoft Fabric.
-            <br>Credential ID: A86185-E1BZ88
+            30 modules · 27 hrs 45 min training.
           </p>
           <a href="https://learn.microsoft.com/en-us/users/portiawayesa-1409/credentials/certification/fabric-data-engineer-associate"
-            target="_blank" class="verify-link">
-            <i class="fas fa-external-link-alt"></i> Verify credential online
+            target="_blank" class="verify-btn">
+            <i class="fas fa-external-link-alt"></i> Verify credential
           </a>
         </div>
-      </div>
 
-      <!-- AZURE DATA FUNDAMENTALS -->
-      <div class="education-card reveal-left">
-        <div class="edu-icon">
-          <i class="fab fa-microsoft"></i>
-        </div>
-        <div class="edu-content">
-          <h3>Microsoft Certified: Azure Data Fundamentals</h3>
-          <p class="edu-school">Microsoft &mdash; Exam DP-900</p>
-          <p class="edu-year">
-            Earned: March 20, 2026 &nbsp;|&nbsp; No expiry
-            <span class="honours-pill">Fundamentals <i class="fas fa-star"></i></span>
-          </p>
-          <p class="edu-desc">
-            Covers core data concepts, relational and non-relational data in Azure, modern data warehouse analytics,
-            and stream processing fundamentals. 30 modules completed, 27 hrs 45 min training.
-            <br>Credential ID: M48693-805E51
+        <div class="cert-card reveal-right">
+          <div class="cert-header">
+            <div class="ms-logo"><i class="fab fa-microsoft"></i></div>
+            <div class="cert-badge fundamentals">FUNDAMENTALS</div>
+          </div>
+          <h3>Microsoft Certified:<br>Azure Data Fundamentals</h3>
+          <p class="cert-exam">Exam DP-900 &nbsp;·&nbsp; Earned March 20, 2026</p>
+          <p class="cert-expiry">No expiry &nbsp;·&nbsp; Credential: M48693-805E51</p>
+          <p class="cert-desc">
+            Covers core data concepts, relational and non-relational Azure data services,
+            modern data warehouse analytics, and stream processing fundamentals.
           </p>
           <a href="https://learn.microsoft.com/en-us/users/portiawayesa-1409/credentials/certification/azure-data-fundamentals"
-            target="_blank" class="verify-link">
-            <i class="fas fa-external-link-alt"></i> Verify credential online
+            target="_blank" class="verify-btn">
+            <i class="fas fa-external-link-alt"></i> Verify credential
           </a>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
-
 
   <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Skills</h2>
+  <section id="skills" class="section dark">
+    <div class="section-inner">
+      <h2 class="section-title light">Skills</h2>
+      <div class="skills-outer">
 
-    <div class="skills-grid">
+        <!-- Technical pills -->
+        <div class="skill-group reveal-left">
+          <h3 class="skill-group-title"><i class="fas fa-laptop-code"></i> Development</h3>
+          <div class="pills">
+            <span class="pill-skill">C#</span>
+            <span class="pill-skill">Dart</span>
+            <span class="pill-skill">SQL</span>
+            <span class="pill-skill">HTML</span>
+            <span class="pill-skill">CSS</span>
+            <span class="pill-skill">Flutter</span>
+            <span class="pill-skill">ASP.NET</span>
+            <span class="pill-skill">Firebase</span>
+            <span class="pill-skill">REST APIs</span>
+            <span class="pill-skill">Git / GitHub</span>
+          </div>
+        </div>
 
-      <!-- TECHNICAL -->
-      <div class="skill-card reveal-left">
-        <h3>
-          <i class="fas fa-laptop-code skill-icon"></i>
-          Technical Skills
-        </h3>
-        <div class="skill-pill">C#</div>
-        <div class="skill-pill">Dart</div>
-        <div class="skill-pill">SQL</div>
-        <div class="skill-pill">Flutter</div>
-        <div class="skill-pill">ASP.NET</div>
-        <div class="skill-pill">Firebase</div>
-        <div class="skill-pill">HTML</div>
-        <div class="skill-pill">CSS</div>
-        <div class="skill-pill">REST APIs</div>
-        <div class="skill-pill">Git</div>
-        <div class="skill-pill">GitHub</div>
+        <!-- Data & Cloud -->
+        <div class="skill-group reveal-right">
+          <h3 class="skill-group-title"><i class="fas fa-cloud"></i> Data &amp; Cloud</h3>
+          <div class="pills">
+            <span class="pill-skill highlight">Microsoft Fabric</span>
+            <span class="pill-skill highlight">Azure Data Services</span>
+            <span class="pill-skill">Apache Spark</span>
+            <span class="pill-skill">KQL</span>
+            <span class="pill-skill">Data Warehousing</span>
+            <span class="pill-skill">Lakehouse Architecture</span>
+            <span class="pill-skill">Real-Time Analytics</span>
+            <span class="pill-skill">CI/CD Pipelines</span>
+            <span class="pill-skill">OCR / AI Processing</span>
+            <span class="pill-skill">Firebase Firestore</span>
+          </div>
+        </div>
+
+        <!-- Skill bars -->
+        <div class="skill-group reveal-left">
+          <h3 class="skill-group-title"><i class="fas fa-chart-bar"></i> Proficiency</h3>
+          <div class="skill-bars">
+            <div class="bar-row">
+              <span>Flutter / Dart</span>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+              <span class="bar-pct">85%</span>
+            </div>
+            <div class="bar-row">
+              <span>C# / ASP.NET</span>
+              <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+              <span class="bar-pct">80%</span>
+            </div>
+            <div class="bar-row">
+              <span>Firebase / Firestore</span>
+              <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+              <span class="bar-pct">82%</span>
+            </div>
+            <div class="bar-row">
+              <span>SQL / Databases</span>
+              <div class="bar-track"><div class="bar-fill" data-width="83"></div></div>
+              <span class="bar-pct">83%</span>
+            </div>
+            <div class="bar-row">
+              <span>Microsoft Fabric</span>
+              <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
+              <span class="bar-pct">78%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft skills -->
+        <div class="skill-group reveal-right">
+          <h3 class="skill-group-title"><i class="fas fa-people-group"></i> Soft Skills</h3>
+          <div class="pills">
+            <span class="pill-skill">Problem Solving</span>
+            <span class="pill-skill">Team Collaboration</span>
+            <span class="pill-skill">Time Management</span>
+            <span class="pill-skill">Communication</span>
+            <span class="pill-skill">Adaptability</span>
+            <span class="pill-skill">Continuous Learning</span>
+          </div>
+        </div>
+
       </div>
-
-      <!-- DATA & CLOUD -->
-      <div class="skill-card reveal-right">
-        <h3>
-          <i class="fas fa-cloud skill-icon"></i>
-          Data &amp; Cloud
-        </h3>
-        <div class="skill-pill">Microsoft Fabric</div>
-        <div class="skill-pill">Azure Data Services</div>
-        <div class="skill-pill">Apache Spark</div>
-        <div class="skill-pill">KQL</div>
-        <div class="skill-pill">Data Warehousing</div>
-        <div class="skill-pill">Lakehouse Architecture</div>
-        <div class="skill-pill">Real-Time Analytics</div>
-        <div class="skill-pill">CI/CD Pipelines</div>
-        <div class="skill-pill">Firebase Firestore</div>
-        <div class="skill-pill">OCR / AI Processing</div>
-      </div>
-
-      <!-- SOFT -->
-      <div class="skill-card reveal-left">
-        <h3>
-          <i class="fas fa-people-group skill-icon"></i>
-          Soft Skills
-        </h3>
-        <div class="skill-pill">Problem Solving</div>
-        <div class="skill-pill">Team Collaboration</div>
-        <div class="skill-pill">Time Management</div>
-        <div class="skill-pill">Communication</div>
-        <div class="skill-pill">Adaptability</div>
-      </div>
-
     </div>
   </section>
-
 
   <!-- PROJECTS -->
-  <section id="projects" class="section dark">
-    <h2 class="section-title">Featured Projects</h2>
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
 
-    <div class="projects-grid">
-
-      <!-- PAMPIRI -->
-      <div class="project-card reveal-right">
-        <img src="images/pampiri.jpeg" alt="Pampiri Project">
-        <div class="project-content">
-          <h3>Pampiri &ndash; AI Document &amp; Receipt Processing Platform</h3>
-          <p>A live, AI-powered mobile platform that scans receipts and documents, extracts structured data via OCR
-            and intelligent text recognition, and exports to Word, Excel, CSV, and JSON formats.
-            Built with Flutter and Firebase, designed for scalable real-world document digitisation.</p>
-          <br>
-          <ul>
-            <li>AI-powered OCR text extraction and data transformation</li>
-            <li>Export to Word, Excel, CSV and JSON</li>
-            <li>Cloud database integration using Firebase</li>
-            <li>Scalable subscription-based architecture</li>
-          </ul>
-          <br>
-          <div class="project-tags">
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">Firebase</span>
-            <span class="tech-pill">OCR</span>
-            <span class="tech-pill">AI</span>
+        <!-- PAMPIRI -->
+        <div class="project-card reveal-right">
+          <div class="project-img-wrap">
+            <img src="images/pampiri.jpeg" alt="Pampiri">
+            <div class="project-overlay">
+              <a href="https://mypampiri.co.za" target="_blank" class="overlay-btn">
+                <i class="fas fa-external-link-alt"></i> View Live
+              </a>
+            </div>
           </div>
-          <br>
-          <a href="https://mypampiri.co.za" target="_blank" class="verify-link">
-            <i class="fas fa-external-link-alt"></i> View Live App
-          </a>
-        </div>
-      </div>
-
-      <!-- JOB SYSTEM -->
-      <div class="project-card reveal-left">
-        <img src="images/project.jpg" alt="Job Application System">
-        <div class="project-content">
-          <h3>Student Job Application Management System</h3>
-          <p>A secure, multi-user platform enabling students to apply for jobs and bursaries, lecturers to review
-            applications, and administrators to manage postings — with role-based access control throughout.</p>
-          <br>
-          <ul>
-            <li>Multi-user job and bursary platform</li>
-            <li>Secure role-based authentication and access control</li>
-            <li>Backend REST API and database design</li>
-          </ul>
-          <br>
-          <div class="project-tags">
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">ASP.NET</span>
-            <span class="tech-pill">Firebase</span>
-            <span class="tech-pill">REST APIs</span>
+          <div class="project-content">
+            <div class="project-status live">● LIVE</div>
+            <h3>Pampiri — AI Document &amp; Receipt Processing</h3>
+            <p>A live, AI-powered mobile platform that scans receipts and documents, extracts structured data via OCR, and exports to Word, Excel, CSV, and JSON formats with subscription-based access.</p>
+            <div class="project-pills">
+              <span>Flutter</span><span>Firebase</span><span>OCR</span><span>AI</span>
+            </div>
+            <ul class="project-list">
+              <li>AI-powered OCR text extraction and data transformation</li>
+              <li>Export to Word, Excel, CSV and JSON</li>
+              <li>Scalable subscription-based architecture</li>
+            </ul>
+            <a href="https://mypampiri.co.za" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i> mypampiri.co.za
+            </a>
           </div>
         </div>
-      </div>
 
-      <!-- SMART STUDENT TASK MANAGER -->
-      <div class="project-card reveal-right">
-        <img src="images/smart.png" alt="Smart Student Task Manager">
-        <div class="project-content">
-          <h3>Smart Student Task Manager</h3>
-          <p>A Flutter mobile app that helps students efficiently organise study tasks, set reminders, and track
-            deadlines with real-time cloud synchronisation and AI-driven task prioritisation.</p>
-          <br>
-          <ul>
-            <li>AI-powered task prioritisation</li>
-            <li>Push notifications and reminders</li>
-            <li>Real-time cross-device sync via Firebase Firestore</li>
-            <li>Clean, accessible mobile UI</li>
-          </ul>
-          <br>
-          <div class="project-tags">
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">Firebase</span>
-            <span class="tech-pill">AI</span>
-            <span class="tech-pill">Notifications</span>
+        <!-- JOB SYSTEM -->
+        <div class="project-card reveal-left">
+          <div class="project-img-wrap">
+            <img src="images/project.jpg" alt="Job Application System">
+          </div>
+          <div class="project-content">
+            <div class="project-status built">● BUILT</div>
+            <h3>Student Job Application Management System</h3>
+            <p>A secure, multi-user platform enabling students to apply for jobs and bursaries, lecturers to review applications, and admins to manage postings — with role-based access control.</p>
+            <div class="project-pills">
+              <span>Flutter</span><span>ASP.NET</span><span>Firebase</span><span>REST APIs</span>
+            </div>
+            <ul class="project-list">
+              <li>Role-based authentication across 3 user types</li>
+              <li>Backend REST API and full database design</li>
+              <li>Secure multi-user data flow</li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      <!-- MEDICATION -->
-      <div class="project-card reveal-left">
-        <img src="images/medication.png" alt="Medication Tracker">
-        <div class="project-content">
-          <h3>Medication Tracker Mobile App</h3>
-          <p>A Flutter mobile app helping users manage medication schedules with reminders, notifications, and cloud
-            synchronisation to support safe, timely dosing.</p>
-          <br>
-          <ul>
-            <li>Scheduled reminder and notification system</li>
-            <li>Secure login and cloud storage</li>
-            <li>User-friendly accessible mobile interface</li>
-          </ul>
-          <br>
-          <div class="project-tags">
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">Firebase</span>
-            <span class="tech-pill">ASP.NET</span>
+        <!-- TASK MANAGER -->
+        <div class="project-card reveal-right">
+          <div class="project-img-wrap">
+            <img src="images/smart.png" alt="Smart Student Task Manager">
+          </div>
+          <div class="project-content">
+            <div class="project-status built">● BUILT</div>
+            <h3>Smart Student Task Manager</h3>
+            <p>A Flutter mobile app with AI-powered task prioritisation, real-time cloud sync via Firebase Firestore, and push notification scheduling for student productivity.</p>
+            <div class="project-pills">
+              <span>Flutter</span><span>Firebase</span><span>AI</span><span>Notifications</span>
+            </div>
+            <ul class="project-list">
+              <li>AI-based task prioritisation</li>
+              <li>Real-time cross-device cloud sync</li>
+              <li>Push notification scheduling</li>
+            </ul>
           </div>
         </div>
-      </div>
 
+        <!-- MEDICATION -->
+        <div class="project-card reveal-left">
+          <div class="project-img-wrap">
+            <img src="images/medication.png" alt="Medication Tracker">
+          </div>
+          <div class="project-content">
+            <div class="project-status built">● BUILT</div>
+            <h3>Medication Tracker Mobile App</h3>
+            <p>A Flutter mobile app helping users manage medication schedules with notification scheduling, secure authentication, and cloud storage for safe, timely dosing.</p>
+            <div class="project-pills">
+              <span>Flutter</span><span>Firebase</span><span>ASP.NET</span>
+            </div>
+            <ul class="project-list">
+              <li>Scheduled reminder and notification system</li>
+              <li>Secure login and cloud storage</li>
+              <li>Clean accessible mobile interface</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-
   <!-- CONTACT -->
-  <section id="contact" class="section contact">
-  <h2 class="section-title">Contact Me</h2>
+  <section id="contact" class="section dark">
+    <div class="section-inner">
+      <h2 class="section-title light">Get In Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">I'm open to Junior Developer, Graduate Programme, and Data Engineering opportunities anywhere in South Africa. Feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:portiawayesa@gmail.com">portiawayesa@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+27719452531">071 945 2531</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Bloemfontein, Free State — Open to relocate</span>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/portia-wayesa/" target="_blank">linkedin.com/in/portia-wayesa</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/PortiaWayesa" target="_blank">github.com/PortiaWayesa</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal-right" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-w">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-  <form class="contact-form" action="https://formspree.io/f/xyklgndw" method="POST">
-    <div class="form-group">
-      <input type="text" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-      <input type="email" name="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-      <input type="text" name="subject" placeholder="Subject" required>
-    </div>
-    <div class="form-group">
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Send Message</button>
-  </form>
-</section>
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2026 Portia Wayesa. All Rights Reserved.</p>
+    <div class="footer-inner">
+      <div class="footer-logo">Portia<span>.dev</span></div>
+      <div class="footer-links">
+        <a href="https://github.com/PortiaWayesa" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/portia-wayesa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://learn.microsoft.com/en-us/users/portiawayesa-1409" target="_blank"><i class="fab fa-microsoft"></i></a>
+        <a href="mailto:portiawayesa@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>&copy; 2026 Portia Wayesa. All Rights Reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
